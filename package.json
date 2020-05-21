@@ -1,0 +1,17 @@
+{
+  "name": "my_bundlephobia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently -k -p \"[{name}]\" -n \"SERVER,UI\" -c \"bgBlue.bold,bgMagenta.bold,bgGreen.bold\" -i \"yarn server\" \"yarn ui\" ",
+    "server": "cd ./api && yarn start",
+    "ui": "cd ./app && yarn start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^5.2.0"
+  }
+}

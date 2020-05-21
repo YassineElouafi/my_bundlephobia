@@ -1,0 +1,21 @@
+{
+  "name": "my_bundlephobia_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "compare-versions": "^3.6.0",
+    "express": "^4.17.1",
+    "git-url-parse": "^11.1.2",
+    "nodemon": "^2.0.4",
+    "package-build-stats": "^6.2.2",
+    "pkg-versions": "^2.1.0",
+    "winston": "^3.2.1"
+  }
+}
