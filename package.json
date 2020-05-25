@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "concurrently -k -p \"[{name}]\" -n \"SERVER,UI\" -c \"bgBlue.bold,bgMagenta.bold,bgGreen.bold\" -i \"yarn server\" \"yarn ui\" ",
-    "install-all": "cd ./app && yarn && cd ../api && yarn",
+    "install-all": "yarn && cd ./app && yarn && cd ../api && yarn",
     "install-ui": "cd ./app && yarn",
     "install-server": "cd ./api && yarn",
     "server": "cd ./api && yarn start",
