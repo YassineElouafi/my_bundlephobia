@@ -51,11 +51,6 @@ const Body:React.FC<BodyProsps> = ({selectedPackage}) => {
                     <Charts>
                         <BarChart packageHistory={packageHistory}/>
                     </Charts>
-                    {selectedPackage}
-                    <br/>
-                    {JSON.stringify(packageInfo)}
-                    <br/>
-                    {JSON.stringify(packageHistory)}
                 </div>
             ) }
         </BodyContainer>
