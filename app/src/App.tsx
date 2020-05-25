@@ -1,24 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import {SearchInput} from './components'
+import styled from 'styled-components';
+import {Body} from './layouts'
+
+const Container = styled.div`
+  display: block;
+`;
+
+const Header = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 30px;
+  border-bottom: 1px solid #dddddd;
+`;
+
+const Logo = styled.div`
+  margin-right: 50px;
+  align-self: center;
+  justify-content: center;
+`;
 
 function App() {
+  const [selectedPackage, setSelectedPackage] = useState("react");
+  
+  const onSelect = async (value: string) => {
+    if (value) setSelectedPackage(value);
+  }
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Container>
+        <Header>
+          <Logo>
+            <strong>MY BUNDLEPHOBIA</strong>
+          </Logo>
+          <SearchInput onSelect={onSelect} />
+        </Header>
+        <Body selectedPackage={selectedPackage}/>
+      </Container>
     </div>
   );
 }
