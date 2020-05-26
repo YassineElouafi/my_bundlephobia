@@ -14,14 +14,28 @@ const ChartContainer = styled.div`
 
 
 export default function BarChart({ packageHistory }: Props) {
+
     return (
         <ChartContainer>
             <h2>Versions :</h2>
             <br/>
             <Bar  
                 height={300}
-                data={{ datasets: packageHistory,
-                        labels: packageHistory.map((el:any) => {return el?.version}) }} 
+                data={{ 
+                    datasets: [
+                        {
+                            label: "size",
+                            data: packageHistory.map((el:any)=> {return el?.size}),
+                            backgroundColor: "#e8f2ee"
+                        },
+                        {
+                            label: "gzip",
+                            data: packageHistory.map((el:any)=> {return el?.gzip}),
+                        }
+                    ],
+                    labels: packageHistory.map((el:any) => {return el?.version})
+                }} 
+                options={{ maintainAspectRatio: false }}
             />
         </ChartContainer>
     )

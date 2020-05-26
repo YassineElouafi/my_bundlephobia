@@ -41,10 +41,10 @@ app.get('/history', async (req, res) => {
   }
 })
 
-app.use((err, req, res, next) => {
+app.use((error, req, res, next) => {
   winston.error(error)
   if (res.headersSent) {
-    return next(err)
+    return next(error)
   }
   res.sendStatus(500)
 })

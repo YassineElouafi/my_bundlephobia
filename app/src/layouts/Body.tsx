@@ -10,7 +10,7 @@ interface BodyProsps {
 
 
 const BodyContainer = styled.div`
-  padding: 10px 30px;
+  padding: 20px 30px;
 `;
 
 const Charts = styled.div`
@@ -40,7 +40,9 @@ const Body:React.FC<BodyProsps> = ({selectedPackage}) => {
     },[selectedPackage])
 
     if((!packageInfo || !packageHistory) && !loading) return (
-        <h1>No Package Selected</h1>
+        <BodyContainer>
+            <h1>Package Not Found</h1>
+        </BodyContainer>
     );
 
     return (
