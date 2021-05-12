@@ -14,7 +14,7 @@
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
     "@types/styled-components": "^5.1.0",
-    "chart.js": "^2.9.3",
+    "chart.js": "^2.9.4",
     "downshift": "3.2.12",
     "ky": "^0.20.0",
     "react": "^16.13.1",
