@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "compare-versions": "^3.6.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "git-url-parse": "^11.1.2",
     "nodemon": "^2.0.4",
     "package-build-stats": "^6.2.2",
